@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liam Clicker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="main">
+            <div class="left">
+                <h3>Liam Coins: <span class="liamCoinCost">500</span></h3>
+                <img src="./assets/liam_base.jpeg" alt="" class="liam_base_image" 
+                onclick="incrementPointOnClick()" draggable="false">
+            </div>
+
+            <div class="right">
+
+                <div class="upgrade" onclick="buySquirrelLiam()">
+                    <div class="left_section">
+                        <img src="./assets/squirrel_liam.jpg" alt="" class="upgrade_img">
+                    </div>
+                    <div class="mid_section">
+                        <h4>Squirrel Liam</h4>
+                        <div class="cost_info">
+                            <p>Cost: <span class="squirrelLiamCost">10</span></p>
+                            <img src="./assets/liam_base.jpeg" alt="" class="liam_base_upgrade_img">
+                        </div>
+                    </div>
+                    <div class="right_section">Level <span class="squirrelLiamCount">0</span>
+                    </div>
+
+                    <div class="next_level_info">
+                        <p>
+                            +<span class="squirrelLiamCoinsPerClickDisplay">1</span> coins <br/> per click
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="upgrade" onclick="buyPoshLiam()">
+                    <div class="left_section">
+                        <img src="./assets/posh_liam.jpg" alt="" class="upgrade_img">
+                    </div>
+                    <div class="mid_section">
+                        <h4>Posh Liam</h4>
+                        <div class="cost_info">
+                            <p>Cost: <span class="poshLiamCost">100</span></p>
+                            <img src="./assets/liam_base.jpeg" alt="" class="liam_base_upgrade_img">
+                        </div>
+                    </div>
+                    <div class="right_section">Level <span class="poshLiamCount">0</span>
+                    </div>
+
+                    <div class="next_level_info">
+                        <p>
+                            +<span class="poshLiamCoinsPerSecondDisplay">0</span> coins <br /> per second.
+                        </p>
+                    </div>
+                </div>
+
+
+
+            </div>
+                    
+            </div>
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>

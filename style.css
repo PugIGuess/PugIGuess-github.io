@@ -1,0 +1,93 @@
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: bisque;
+    user-select: none;
+}
+
+.main {
+    display: flex;
+    gap: 200px;
+}
+
+.left h3 {
+   text-align: center;
+   font-family: papyrus;
+   font-size: 30px;
+   margin-bottom: 50px;
+}
+
+
+
+.liam_base_image {
+    width: 400px;
+    height: 300px;
+}
+
+.liam_base_image:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.liam_base_image:active {
+    opacity: 0.8;
+    transform: scale(1.02)
+}
+
+.upgrade {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 330px;
+    height: 60px;
+    border: 4px solid white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+
+.mid_section h4 {
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 20px;
+    /* font-family: papyrus; */
+}
+
+.mid_section p {
+    margin: 0;
+}
+
+.upgrade_img {
+    width: 55px;
+}
+
+.liam_base_upgrade_img {
+    width: 20px;
+    height: 20px;
+}
+
+.cost_info {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.next_level_info {
+    position: absolute;
+    right: -105px; 
+    background-color: gray;
+    height: 80px;
+    width: 100px;
+    text-align: center;
+    display: none;
+}
+
+.upgrade:hover .next_level_info {
+    display: block;
+}
+
