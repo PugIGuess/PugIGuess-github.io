@@ -1,3 +1,41 @@
+function openShop() {
+    const shopMenu = document.getElementById("shopMenu");
+    shopMenu.style.display = "block";
+    // shopMenu.style.justifyContent = "space-between";
+}
+
+function closeShop() {
+    const shopMenu = document.getElementById("shopMenu");
+    shopMenu.style.display = "none";
+}
+
+
+
+// SHOP
+let testBuyAbility = true
+let doesNothing = false
+function testbuy() {
+    if (testBuyAbility && parsed_coins >= 100) {
+        testBuyAbility = false
+
+        parsed_coins = parsed_coins - 100
+        current_coins.innerHTML = Math.round(parsed_coins)
+
+        let button = document.querySelector('.shopTestItem')
+        button.innerHTML = "does nothing: bought"
+
+        doesNothing = true
+        doesNothingTest()
+        }
+    }
+
+function doesNothingTest() {
+    if (doesNothing === true) {
+    parsed_coins = parsed_coins + 500
+    current_coins.innerHTML = Math.round(parsed_coins)
+    }
+}
+
 // converts coins to parsed coins.
 let current_coins = document.querySelector('.liamCoinCost');
 let parsed_coins = parseFloat(current_coins.innerHTML)

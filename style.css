@@ -13,6 +13,48 @@ body {
     gap: 200px;
 }
 
+.shop-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.shop-menu .shop_content {
+    margin-top: 50px;
+}
+
+.shop-menu .closeShopButton {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #ff5c5c;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.shop-menu button:hover {
+    background-color: #ff0000;
+}
+
+.shopTestItem {
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    font-family: papyrus;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
 .left h3 {
    text-align: center;
    font-family: papyrus;
