@@ -32,17 +32,24 @@ function testbuy() {
         }
     }
 
+
+
 function doesNothingTest() {
     if (doesNothing === true) {
     stareLiamDisplay.style.display = "flex"
+    clickerImageCheck()
+    // baseLiamImage.src = './assets/greasyliam.jpg'
     }
 }
+
+
 
 // converts coins to parsed coins.
 let current_coins = document.querySelector('.liamCoinCost');
 let parsed_coins = parseFloat(current_coins.innerHTML)
 
 let coinsPerClick = 1;
+
 
 function incrementPointOnClick() {
     parsed_coins += coinsPerClick
@@ -58,6 +65,14 @@ function coinsPerSecond() {
 }
 
 setInterval(coinsPerSecond, 1000)
+
+let imageCheck = 0
+function clickerImageCheck() {
+    if (imageCheck == 0) {
+        let baseLiamImage = document.querySelector('.liam_base_image')
+        baseLiamImage.src = './assets/greasyliam.jpg'
+    }
+}
 
 function buySquirrelLiam() {
     let squirrelLiamCount = document.querySelector('.squirrelLiamCount')
