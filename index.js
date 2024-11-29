@@ -14,6 +14,9 @@ function closeShop() {
 // SHOP
 let testBuyAbility = true
 let doesNothing = false
+let stareLiamDisplay = document.getElementById("hiddenshop");
+stareLiamDisplay.style.display = "none"
+
 function testbuy() {
     if (testBuyAbility && parsed_coins >= 100) {
         testBuyAbility = false
@@ -31,8 +34,7 @@ function testbuy() {
 
 function doesNothingTest() {
     if (doesNothing === true) {
-    parsed_coins = parsed_coins + 500
-    current_coins.innerHTML = Math.round(parsed_coins)
+    stareLiamDisplay.style.display = "flex"
     }
 }
 
@@ -119,6 +121,38 @@ function buyPoshLiam() {
         poshLiamCost.innerHTML = Math.round(parsedPoshLiamCost * 1.8)
     }
 }
+
+function buyStareLiam() {
+    let stareLiamCount = document.querySelector('.stareLiamCount')
+    let stareLiamCoinsPerSecond = 0
+
+    let stareLiamCost = document.querySelector('.stareLiamCost')
+    let parsedStareLiamCost = parseFloat(stareLiamCost.innerHTML)
+
+
+    if (parsed_coins >= parsedStareLiamCost) {
+        parsed_coins = parsed_coins - parsedStareLiamCost
+        current_coins.innerHTML = Math.round(parsed_coins)
+
+        //ups the level count
+        let currentLevel = parseInt(stareLiamCount.innerHTML);
+        currentLevel += 1;
+        stareLiamCount.innerHTML = currentLevel;
+
+        // more coins per second
+        stareLiamCoinsPerSecond += 5
+        coinsPerSecondVal += 5
+
+        // coins per second popup increases
+        let stareLiamCoinsPerSecondDisplay = document.querySelector('.stareLiamCoinsPerSecondDisplay')
+        let parsedStareLiamCPSDisplay = parseFloat(stareLiamCoinsPerSecondDisplay.innerHTML)
+        stareLiamCoinsPerSecondDisplay.innerHTML = Math.round(parsedStareLiamCPSDisplay + 5)
+
+        //cost increases
+        stareLiamCost.innerHTML = Math.round(parsedStareLiamCost * 1.8)
+    }
+}   
+
 
 
 
