@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPG ATTEMPT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+
+        
+        <div class="left">
+            <div class="initialKiryuStage">
+                kiryu coins: <span class="kiryuCoinCount">0</span>
+                <p class="staminanStatus" style="display: none;">staminan drank: <span class="staminanDrankNumber">0</span></p>
+                <br>
+                <button class="kiryuCoinButton" onclick="I_Affirm()">I affirm</button>
+                <br>
+                <button class="drinkStaminanButton" style="display: none;" onclick="drinkStaminan()">Drink Staminan: 20 KC</button>
+                <br>
+            </div>
+            
+
+            <div class="secondStage" style="display: none;">
+                <img src="assets/bald_kiryu.jpg" class="baldKiryu" alt="" width="300">
+                <br>
+                <button class="heatActionButton2ndStage" onclick="perform_Heat_Action()">Perform Heat Action</button>
+            </div>
+
+            <div class="thirdStage" style="display: none;">
+                kiryu FREAKING kazuma
+                <br>
+                <img src="assets/kiryu-kazuma.png" alt="">
+
+            </div>
+
+
+        </div>
+
+        <div class="right">
+
+            <div class="secondStageRight" style="display: none;">
+                <div class="majimaHealth">
+                    Majima Health: <span class="majimaHealthCount">100</span>
+                </div>
+                <img src="assets/majima_face.jpg" alt="">
+                
+
+            </div>
+
+
+
+
+
+
+        </div>
+
+
+
+
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
